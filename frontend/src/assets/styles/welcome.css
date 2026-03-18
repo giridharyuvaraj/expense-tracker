@@ -1,0 +1,116 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme Color */
+:root {
+    --main: #4f8cff;
+    --main-dark: #3b6fe0;
+}
+
+
+
+/* Fullscreen Hero */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #eef4ff, #f9fbff);
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Center Content */
+.welcome-content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Title */
+.welcome-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.welcome-title span {
+    color: #3b6fe0;
+}
+
+/* Subtitle */
+.welcome-subtitle {
+    font-size: 1.1rem;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+/* Buttons Container */
+.welcome-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+/* Common Button Style */
+.welcome-actions button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+/* Login Button (Primary) */
+.login-btn {
+    background: var(--main);
+    color: #fff;
+}
+
+.login-btn:hover {
+    background: var(--main-dark);
+    transform: translateY(-2px);
+}
+
+/* Register Button (Outline Style) */
+.register-btn {
+    background: transparent;
+    color: var(--main);
+    border: 2px solid var(--main);
+}
+
+.register-btn:hover {
+    background: var(--main);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 2rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .welcome-actions {
+        flex-direction: column;
+    }
+
+    .welcome-actions button {
+        width: 100%;
+    }
+}
