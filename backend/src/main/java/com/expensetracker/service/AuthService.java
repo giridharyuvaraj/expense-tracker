@@ -49,6 +49,7 @@ public class AuthService {
                 .name(savedUser.getName())
                 .email(savedUser.getEmail())
                 .salary(savedUser.getSalary())
+                .createdAt(savedUser.getCreatedAt())  // FIXED: was missing
                 .build();
     }
 
@@ -68,6 +69,7 @@ public class AuthService {
                 .name(user.getName())
                 .email(user.getEmail())
                 .salary(user.getSalary())
+                .createdAt(user.getCreatedAt())  // FIXED: was missing
                 .build();
     }
 }
