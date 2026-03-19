@@ -12,7 +12,6 @@ A full-stack Personal Expense and Loan Manager built with **Spring Boot** and **
 - **Data Visualization**: Gain insights into spending patterns with interactive Recharts.
 - **AI-Powered Insights**: Integrated with Gemini API for financial suggestions.
 - **Responsive Design**: Fully mobile-responsive UI built with React Bootstrap.
-- **Export Data**: Export financial reports to CSV.
 
 ---
 
@@ -89,11 +88,3 @@ expense-tracker/
 └── DOCKER.md           # Docker usage instructions
 ```
 
----
-
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-Developed with ❤️ by [Giridhar](https://github.com/giridharyuvaraj)
