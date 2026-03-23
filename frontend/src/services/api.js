@@ -5,19 +5,32 @@ const api = axios.create({
     headers: { 'Content-Type': 'application/json' }
 });
 
-api.interceptors.request.use(config => {
-    const token = localStorage.getItem('token');
-    if (token) config.headers.Authorization = `Bearer ${token}`;
-    return config;
-});
+// ─── Attach JWT token to every request ───────────────────────────────────────
+api.interceptors.request.use(
+    config => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+    },
+    error => Promise.reject(error)
+);
 
+// ─── Handle expired / invalid token responses ─────────────────────────────────
 api.interceptors.response.use(
     response => response,
     error => {
-        if (error.response?.status === 401) {
+        const status = error.response?.status;
+
+        // 401 = token expired or invalid (now returned by JwtAuthFilter)
+        // 403 = fallback in case Spring Security still returns 403
+        if (status === 401 || status === 403) {
+            console.warn('Session expired or unauthorized. Redirecting to login...');
             localStorage.clear();
             window.location.href = '/login';
         }
+
         return Promise.reject(error);
     }
 );

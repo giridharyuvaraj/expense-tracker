@@ -295,7 +295,7 @@ const Navbar = ({ onMenuClick }) => {
                                     );
                                 })}
                             </div>
-                            <div style={{ padding: '8px 14px', borderTop: '1px solid #f1f5f9', textAlign: 'center' }}>
+                            {/* <div style={{ padding: '8px 14px', borderTop: '1px solid #f1f5f9', textAlign: 'center' }}>
                                 <button onClick={() => { navigate('/notifications'); setShowNotifications(false); }}
                                     style={{
                                         background: 'none', border: 'none',
@@ -304,7 +304,7 @@ const Navbar = ({ onMenuClick }) => {
                                     }}>
                                     View all →
                                 </button>
-                            </div>
+                            </div> */}
                         </div>
                     )}
                 </div>
