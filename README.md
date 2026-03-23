@@ -40,6 +40,7 @@ A full-stack Personal Expense and Loan Manager built with **Spring Boot** and **
 * 🌍 Frontend: https://expense-tracker-ten-amber-47.vercel.app
 * ⚙️ Backend: https://expense-tracker-lhgx.onrender.com
 * 📄 Swagger API Docs: https://expense-tracker-lhgx.onrender.com/swagger-ui.html
+* 🔍 SonarCloud Analysis: https://sonarcloud.io/project/overview?id=giridharyuvaraj_expense-tracker
 
 ---
 
