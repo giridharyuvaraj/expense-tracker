@@ -69,7 +69,7 @@ public class AuthService {
                 .name(user.getName())
                 .email(user.getEmail())
                 .salary(user.getSalary())
-                .createdAt(user.getCreatedAt())  // FIXED: was missing
+                .createdAt(user.getCreatedAt())  // FIXED: was missing.
                 .build();
     }
 }
